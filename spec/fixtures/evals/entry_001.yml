@@ -1,0 +1,45 @@
+# Sitting 2: one synthetic entry + the events you'd expect from it.
+# Invented life only — no real people, places or events from private writing.
+#
+# Event dates are periods: start_date / end_date.
+# Incomplete dates are allowed as strings: YYYY | YYYY-MM | YYYY-MM-DD.
+# Match the precision the text supports — don't invent a day or month.
+# status: occurred | planned | ongoing
+# end_date may be null when the span is still open.
+
+id: entry_001
+written_on: 2026-11-27
+source: journal
+
+body: |
+  Went to my local pub to meet with some friends I've not seen for a long time (maybe 7 years?)
+  we last were together during the trip to Budapest. I miss travelling and seeing friends.
+  we had a good time but i felt like we've drifted apart. one has kids, the other has completely changed
+  their career. they seem happier for it but it sounds like a dificult life for both of them. maybe If I'd stuck with
+  my dream of being a vet and gone to medical school instead caring for mum things woud have been different.
+  its the aniversary of her death next week. can't believe its been 3 years already...
+  I've got the trip to rome with my husband to look forward to at least. June 2027 can't come soon enough.
+  The business thing with Sam has been going about 18 months now. Still ticking over but it's starting to feel tiring.
+
+expected:
+  events:
+    - start_date: 2026-11-24
+      end_date: 2026-11-27
+      status: occurred
+      summary: "Met old friends at the local pub"
+    - start_date: "2019"
+      end_date: "2019"
+      status: occurred
+      summary: "Trip to Budapest with friends (about ten days, sometime in the year)"
+    - start_date: 2023-12-01
+      end_date: 2023-12-07
+      status: occurred
+      summary: "Mum died; anniversary is next week, about three years on"
+    - start_date: "2027-06"
+      end_date: "2027-06"
+      status: planned
+      summary: "Trip to Rome with husband"
+    - start_date: "2025-05"
+      end_date: null
+      status: ongoing
+      summary: "Business collaboration with Sam, about 18 months in and feeling tiring"
